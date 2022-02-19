@@ -1,0 +1,11 @@
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\AzureApp31.exe
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\appsettings.Development.json
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\appsettings.json
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\AzureApp31.dll
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\AzureApp31.deps.json
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\AzureApp31.runtimeconfig.json
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\AzureApp31.pdb
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\Microsoft.OpenApi.dll
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vzlen\source\repos\AzureApp31\AzureApp31\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
