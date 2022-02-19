@@ -48,6 +48,7 @@ namespace AzureApp31.Controllers
         {
             _values.Add(item.value);
             _values.Add(item.value + 2);
+            _values.Add(item.value + 4);
 
             return Ok(_values);
         }
