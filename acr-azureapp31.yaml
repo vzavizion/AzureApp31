@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azureapp31-deployment
+  labels:
+    app: azureapp31-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: azureapp31
+  template:
+    metadata:
+      labels:
+        app: azureapp31
+    spec:
+      containers:
+      - name: azureapp31
+        image: vzazContainerRegistry.azurecr.io/azureapp31:1.0
+        ports:
+        - containerPort: 80
