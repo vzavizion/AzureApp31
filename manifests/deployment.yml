@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vzaz31 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vzaz31
+  template:
+    metadata:
+      labels:
+        app: vzaz31 
+    spec:
+      containers:
+        - name: vzaz31 
+          image: vzazcontainerregistry.azurecr.io/vzaz31
+          ports:
+          - containerPort: 80
