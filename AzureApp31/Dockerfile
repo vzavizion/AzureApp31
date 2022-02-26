@@ -10,8 +10,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["AzureApp31/AzureApp31.csproj", "AzureApp31/"]
-RUN dotnet restore "AzureApp31/AzureApp31.csproj"
+COPY ["AzureApp31.csproj", "AzureApp31/"]
+RUN dotnet restore "AzureApp31.csproj"
 COPY . .
 WORKDIR "/src/AzureApp31"
 RUN dotnet build "AzureApp31.csproj" -c Release -o /app/build
