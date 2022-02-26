@@ -40,9 +40,69 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.14.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.17.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.2.88, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
