@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AzureApp31.Controllers
@@ -20,7 +21,7 @@ namespace AzureApp31.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        static List<int> _values;
+        static List<Person> _values;
         static List<ApplicationUser> _users;
 
         //private readonly IConnectionMultiplexer _redis;               
@@ -49,11 +50,11 @@ namespace AzureApp31.Controllers
 
         private static void Init()
         {
-            _values = new List<int>();
+            _values = new List<Person>();
 
-            _values.Add(2);
-            _values.Add(4);
-            _values.Add(6);
+            _values.Add(new Person() { id = 1, name = "aaa" });
+            _values.Add(new Person() { id = 2, name = "bbb" });
+            _values.Add(new Person() { id = 3, name = "ccc" });
 
             _users = new List<ApplicationUser>();
             for (int i=0; i<_values.Count; i++)
@@ -87,7 +88,7 @@ namespace AzureApp31.Controllers
         }
 
         [HttpGet, ActionName("GetAll")]
-        public IEnumerable<int> GetAll()
+        public IEnumerable<Person> GetAll()
         {
             //Exception to Elastic
             //_logger.LogWarning(String.Format("GetAll Request {0}", DateTime.Now));
@@ -121,24 +122,22 @@ namespace AzureApp31.Controllers
         }
 
         [HttpGet("{id}"), ActionName("GetById")]
-        public int GetById([FromRoute] int id)
+        public Person GetById([FromRoute] int id)
         {
-            return _values[id];
+            return _values.FirstOrDefault(p => p.id == id);
         }
 
         [HttpGet, ActionName("GetByIdQ")]
-        public int GetByIdQ([FromQuery] int id)
+        public Person GetByIdQ([FromQuery] int id)
         {
-            return _values[id];
+            return _values.FirstOrDefault(p => p.id == id);
         }
 
         [HttpPost, ActionName("Add")]
-        public IActionResult Add(Item item)
+        public IActionResult Add(Person person)
         {
-            _values.Add(item.value);
-            _values.Add(item.value + 2);
-            _values.Add(item.value + 4);
-
+            _values.Add(person);
+            
             return Ok(_values);
         }
 

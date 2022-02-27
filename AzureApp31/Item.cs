@@ -1,7 +1,8 @@
 ﻿namespace AzureApp
 {
-    public class Item
+    public class Person
     {
-        public int value { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }

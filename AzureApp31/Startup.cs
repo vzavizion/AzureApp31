@@ -120,7 +120,7 @@ namespace AzureApp31
                 options.SwaggerEndpoint(url: "../swagger/v1/swagger.json", name: "Azure App");
                 options.DefaultModelsExpandDepth(-1);
                 options.SupportedSubmitMethods(new SubmitMethod[] { SubmitMethod.Get, SubmitMethod.Post });
-                options.RoutePrefix = "";
+                //options.RoutePrefix = "";
             });
 
             app.UseHttpsRedirection();
