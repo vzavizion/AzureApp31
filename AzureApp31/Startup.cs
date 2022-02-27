@@ -21,6 +21,7 @@ using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 using Nest;
 using Microsoft.AspNetCore.Rewrite;
+using AzureApp31.Services;
 
 namespace AzureApp31
 {
@@ -77,6 +78,7 @@ namespace AzureApp31
                     };
                 });
 
+            //Redis
             //var multiplexer = ConnectionMultiplexer.Connect("localhost");
             //services.AddSingleton<IConnectionMultiplexer>(multiplexer);
             //services.AddStackExchangeRedisCache(options =>
@@ -101,6 +103,9 @@ namespace AzureApp31
             var connectionSettings = new ConnectionSettings(new Uri("http://localhost:9200"));
             var client = new ElasticClient(connectionSettings);
             services.AddSingleton<IElasticClient>(client);
+
+            //MongoDb in CosmosDb
+            //services.AddSingleton<ICosmosDbService>(CosmosDbExtensions.InitializeCosmosClientInstanceAsync(Configuration.GetSection("CosmosDb")).GetAwaiter().GetResult());
 
             services.AddTransient<IElasticsearchHelper, ElasticsearchHelper>();
         }
