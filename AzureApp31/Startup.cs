@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 using Nest;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace AzureApp31
 {
@@ -119,6 +120,7 @@ namespace AzureApp31
                 options.SwaggerEndpoint(url: "../swagger/v1/swagger.json", name: "Azure App");
                 options.DefaultModelsExpandDepth(-1);
                 options.SupportedSubmitMethods(new SubmitMethod[] { SubmitMethod.Get, SubmitMethod.Post });
+                options.RoutePrefix = "";
             });
 
             app.UseHttpsRedirection();
@@ -127,6 +129,10 @@ namespace AzureApp31
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //var option = new RewriteOptions();
+            //option.AddRedirect("^$", "swagger");
+            //app.UseRewriter(option);
 
             app.UseEndpoints(endpoints =>
             {
