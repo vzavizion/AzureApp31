@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '1be73d09-fe36-4d69-b521-7539868b4e72'
-  imageRepository: 'vzavizionazureapp'
+  imageRepository: 'vzazpipeline'
   containerRegistry: 'vzazcontainerregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
